@@ -54,7 +54,7 @@ let secondaryNavItems = document.querySelectorAll(".secondary-nav .list a");
 
 window.addEventListener("scroll", () => {
   let scrollPos = window.scrollY;
-  let foundMatch = false; // untuk cek apakah ada section yang cocok
+  let foundMatch = false;
 
   sections.forEach((section) => {
     const offset = section.offsetTop - 100;
@@ -62,18 +62,18 @@ window.addEventListener("scroll", () => {
     const id = section.getAttribute("id");
 
     if (scrollPos >= offset && scrollPos < offset + height) {
-      foundMatch = true; // ada yang cocok
+      foundMatch = true;
 
       secondaryNavItems.forEach((link) => {
         link.parentElement.classList.remove("active");
-        if (link.getAttribute("href") === `#${id}`) {
+        const href = link.getAttribute("href");
+        if (href.endsWith(`/${id}`)) {
           link.parentElement.classList.add("active");
         }
       });
     }
   });
 
-  // Jika tidak ada section yang cocok, hilangkan semua 'active'
   if (!foundMatch) {
     secondaryNavItems.forEach((link) => {
       link.parentElement.classList.remove("active");
