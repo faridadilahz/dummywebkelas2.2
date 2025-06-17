@@ -349,7 +349,7 @@ body {
 }
 
 @media screen and (max-width: 1125px) {
-  #About-us {
+  #about {
     height: auto;
     padding: 20px 0 80px;
   }
@@ -386,7 +386,7 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  #About-us {
+  #about {
     height: auto;
     padding: 20px 0 80px;
   }
@@ -423,7 +423,7 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-  #About-us {
+  #about {
     height: auto;
     padding: 20px 0 80px;
   }
@@ -460,7 +460,7 @@ body {
 }
 
 @media screen and (max-width: 380px) {
-  #About-us {
+  #about {
     height: auto;
     padding: 20px 0 80px;
   }
@@ -497,7 +497,7 @@ body {
 }
 
 /* Filosofi Section */
-#Filosofi {
+#filosofi {
   height: auto;
 }
 .filosofi-logo {
@@ -557,7 +557,7 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  #Filosofi {
+  #filosofi {
     height: auto;
     padding: 10px 0 80px;
   }
@@ -589,13 +589,13 @@ body {
 }
 
 /*Our Team*/
-#Member {
+#member {
   padding: 30px 20px 60px;
   height: auto;
   background-color: #222831;
 }
 
-#Member h1 {
+#member h1 {
   font-size: clamp(50px, 10vw, 70px);
   text-align: center;
   margin: 20px 0;
@@ -603,7 +603,7 @@ body {
   color: #ffffff;
 }
 
-#Member h5 {
+#member h5 {
   font-size: clamp(35px, 8vw, 50px);
   font-weight: 400;
   text-align: center;
@@ -1049,7 +1049,7 @@ ion-icon {
 }
 
 /* Jadwal Piket */
-#Picket-Schedule {
+#picket {
   height: auto;
   padding: clamp(10px, 2vw, 30px) 0 clamp(40px, 8vw, 80px);
   background-color: #181c14;
@@ -1059,20 +1059,25 @@ ion-icon {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  gap: clamp(30px, 5vw, 20px);
+  gap: clamp(20px, 5vw, 30px);
   justify-content: center;
   align-items: center;
 }
 
 .card-picket {
   background: #ffffff;
-  border-bottom: 7px solid #5459ac;
+  border-bottom: 7px solid #a851ff;
   border-radius: 5px;
-  align-content: center;
   width: clamp(200px, 30vw, 200px);
-  height: clamp(370px, 50vw, 450px);
+  height: clamp(320px, 50vw, 400px);
   transition: 0.5s;
-  margin-top: clamp(-40px, -8vw, -20px);
+  padding: 20px 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
 }
 
 .card-picket:hover {
@@ -1081,11 +1086,11 @@ ion-icon {
   border-bottom: 7px solid #7e85ff;
 }
 
-#Picket-Schedule h1 {
+#picket h1 {
   font-size: clamp(50px, 10vw, 70px);
   text-align: center;
   color: #ffffff;
-  margin-bottom: clamp(30px, 12vw, 80px);
+  margin-bottom: clamp(20px, 8vw, 30px);
 }
 
 .card-picket h2,
@@ -1118,99 +1123,31 @@ ion-icon {
   text-align: center;
 }
 
-@media screen and (max-width: 1120px) {
-  #Picket-Schedule {
-    padding: 10px 0 50px;
-    background-color: #181c14;
-  }
-
-  .grid-container {
-    gap: clamp(60px, 8vw, 80px) clamp(30px, 6vw, 30px);
-    margin: clamp(60px, 10vw, 100px) auto;
-  }
-
-  .card-picket h2 {
-    text-align: center;
-    color: #000;
-    border-bottom: 2px solid #e0e0e0;
-    padding-bottom: clamp(6px, 1.5vw, 8px);
-    margin-bottom: clamp(8px, 3vw, 12px);
-    font-weight: 600;
-    font-size: clamp(24px, 6vw, 30px);
-  }
-
-  .card-picket ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .card-picket ul li {
-    padding: clamp(3px, 1.5vw, 6px) 0;
-    border-bottom: 1px solid #f0f0f0;
-    color: #000;
-    font-size: clamp(16px, 4vw, 20px);
-    justify-content: center;
-    text-align: center;
-  }
-
-  .card-picket {
-    width: clamp(100px, 40vw, 200px);
-    height: clamp(230px, 50vw, 400px);
-    height: auto;
-    padding: clamp(20px, 4vw, 40px);
-  }
-}
-
 @media screen and (max-width: 768px) {
-  #Picket-Schedule {
-    padding: 10px 0 50px;
-    background-color: #181c14;
-  }
-
   .grid-container {
-    gap: clamp(60px, 8vw, 80px) clamp(30px, 6vw, 30px);
-    margin: clamp(60px, 10vw, 100px) auto;
-  }
-
-  .card-picket h2 {
-    text-align: center;
-    color: #000;
-    border-bottom: 2px solid #e0e0e0;
-    padding-bottom: clamp(6px, 1.5vw, 8px);
-    margin-bottom: clamp(8px, 3vw, 12px);
-    font-weight: 600;
-    font-size: clamp(24px, 6vw, 30px);
-  }
-
-  .card-picket ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .card-picket ul li {
-    padding: clamp(3px, 1.5vw, 6px) 0;
-    border-bottom: 1px solid #f0f0f0;
-    color: #000;
-    font-size: clamp(16px, 4vw, 20px);
-    justify-content: center;
-    text-align: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .card-picket {
-    width: clamp(100px, 40vw, 200px);
-    height: clamp(230px, 50vw, 400px);
-    height: auto;
-    padding: clamp(20px, 4vw, 40px);
+    width: 90%;
+    max-width: 400px;
   }
 }
 
-/* Jadwal Pelajaran */
-#Lesson-Schedule {
+/*Subject*/
+#subject {
   padding: clamp(10px, 2vw, 30px) 0 clamp(40px, 8vw, 80px);
   height: auto;
   background-color: #1e201e;
+}
+
+#subject h1 {
+  font-size: clamp(50px, 10vw, 70px);
+  text-align: center;
+  margin-top: clamp(20px, 6vw, 40px);
+  margin-bottom: clamp(20px, 8vw, 30px);
+  color: #ffffff;
 }
 
 .subject-container {
@@ -1231,11 +1168,10 @@ ion-icon {
   transition: 0.5s;
   padding: 20px 0;
   box-sizing: border-box;
-
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* ubah ke flex-start supaya h2 dan ul rapi */
-  align-items: center; /* horizontal center */
+  justify-content: flex-start;
+  align-items: center;
   text-align: center;
 }
 
@@ -1243,14 +1179,6 @@ ion-icon {
   filter: brightness(90%);
   transform: scale(1.02);
   border-bottom: 7px solid #c68efd;
-}
-
-#Lesson-Schedule h1 {
-  font-size: clamp(50px, 10vw, 70px);
-  text-align: center;
-  margin-top: clamp(20px, 6vw, 40px);
-  margin-bottom: clamp(20px, 8vw, 30px);
-  color: #ffffff;
 }
 
 .subject h2,
@@ -1266,15 +1194,15 @@ ion-icon {
   margin-bottom: clamp(8px, 3vw, 12px);
   font-weight: 600;
   font-size: clamp(24px, 6vw, 40px);
-  min-height: 3.5rem; /* pastikan tinggi minimum stabil */
-  flex-shrink: 0;     /* jangan ikut mengecil */
+  min-height: 3.5rem;
+  flex-shrink: 0;
 }
 
 .subject ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  flex-grow: 1;       /* agar ul mengisi sisa ruang */
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -1292,45 +1220,95 @@ ion-icon {
   line-height: 1.5;
 }
 
-
 .subject.selasa ul li {
-  /* Atur font size khusus untuk li hari Selasa */
   font-size: clamp(16px, 4vw, 20px);
   line-height: 1.4;
 }
 
-/* Responsive adjustments */
 @media screen and (max-width: 768px) {
   .subject {
-    width: clamp(140px, 40vw, 200px);
-    height: clamp(350px, 60vw, 200px);
-    padding: clamp(20px, 4vw, 40px);
+    width: 50%; /* Biar lebar maksimal di HP */
+    max-width: 400px;
   }
+}
 
-  #Lesson-Schedule h1 {
-    font-size: clamp(30px, 8vw, 55px);
-    margin-top: 20px;
-    margin-bottom: 30px;
-  }
+/*Data*/
+.data {
+  background:#222322;
+  text-align: center;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-  .subject h2 {
-    font-size: clamp(20px, 5vw, 30px);
-  }
+.data.container {
+  padding: 20px 0;
+}
 
-  .subject ul li {
-    font-size: clamp(14px, 4vw, 20px);
+.data-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 70px;
+}
+
+.data-card {
+  background: white;
+  padding: 20px;
+  width: clamp(170px, 25vw, 300px);
+  height: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.5s;
+  border-bottom: 8px solid #03aced;
+  justify-content: space-between;
+}
+
+.data-card:hover {
+  transform: scale(1.03);
+  filter: brightness(95%);
+}
+
+.data-card ion-icon {
+  font-size: 50px;
+  color: #000000;
+  margin: 20px 40px 40px 40px;
+}
+
+.data-card h3 {
+  color: #000000;
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.data-card p {
+  color: #000000;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .data-items {
+    flex-direction: column;
+    align-items: center; /* biar tetap di tengah */
   }
 }
 
 /*Our Photos*/
-#Gallery {
+#gallery {
   padding: 5px 0 80px;
   background: #1c1c1c;
   text-align: center;
   font-family: "Poppins", sans-serif;
 }
 
-#Gallery h1 {
+#gallery h1 {
   margin-bottom: 40px;
   font-weight: 600;
   font-size: 70px;
@@ -1385,14 +1363,14 @@ ion-icon {
 }
 
 @media screen and (max-width: 1024px) {
-  #Gallery {
+  #gallery {
     padding: 5px 0 80px;
     background: #1c1c1c;
     text-align: center;
     font-family: "Poppins", sans-serif;
   }
 
-  #Gallery h1 {
+  #gallery h1 {
     margin-bottom: 40px;
     font-weight: 600;
     font-size: 120px;
@@ -1439,14 +1417,14 @@ ion-icon {
 }
 
 @media screen and (max-width: 768px) {
-  #Gallery {
+  #gallery {
     padding: 5px 0 80px;
     background: #1c1c1c;
     text-align: center;
     font-family: "Poppins", sans-serif;
   }
 
-  #Gallery h1 {
+  #gallery h1 {
     margin-bottom: 40px;
     font-weight: 600;
     font-size: 100px;
@@ -1493,14 +1471,14 @@ ion-icon {
 }
 
 @media screen and (max-width: 600px) {
-  #Gallery {
+  #gallery {
     padding: 5px 0 80px;
     background: #1c1c1c;
     text-align: center;
     font-family: "Poppins", sans-serif;
   }
 
-  #Gallery h1 {
+  #gallery h1 {
     margin-bottom: 40px;
     font-weight: 600;
     font-size: 70px;
@@ -1554,14 +1532,14 @@ ion-icon {
 }
 
 @media screen and (max-width: 400px) {
-  #Gallery {
+  #gallery {
     padding: 5px 0 80px;
     background: #1c1c1c;
     text-align: center;
     font-family: "Poppins", sans-serif;
   }
 
-  #Gallery h1 {
+  #gallery h1 {
     margin-bottom: 40px;
     font-weight: 600;
     font-size: 70px;
