@@ -848,9 +848,18 @@
 
     <script>
       window.addEventListener("load", function () {
-        var audio = document.getElementById("bg-music");
+    var audio = document.getElementById("bg-music");
+    var btn = document.getElementById("music-button");
+    btn.addEventListener("click", function () {
+      if (audio.paused) {
         audio.play();
-      });
+        btn.title = "Pause Djo - End Of Beginning";
+      } else {
+        audio.pause();
+        btn.title = "Play Djo - End Of Beginning";
+      }
+    });
+  });
     </script>
 
     <script>
