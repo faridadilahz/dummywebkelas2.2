@@ -21,19 +21,19 @@
     <li class="dropdown">
       <a href="#" class="dropdown-toggle">Tentang <i class="bi bi-chevron-down"></i></a>
       <ul class="dropdown-menu">
-        <li><a href="#About-us">Tentang Kami</a></li>
-        <li><a href="#Filosofi">Filosofi Logo</a></li>
+        <li><a href="/about" onclick="navigateTo(event, 'about')">Tentang Kami</a></li>
+        <li><a href="/filosofi" onclick="navigateTo(event, 'filosofi')">Filosofi</a></li>
       </ul>
     </li>
-    <li><a href="#Member">Anggota</a></li>
+    <li><a href="/member" onclick="navigateTo(event, 'member')">Anggota</a></li>
     <li class="dropdown">
       <a href="#Schedule" class="dropdown-toggle">Jadwal <i class="bi bi-chevron-down"></i></a>
       <ul class="dropdown-menu">
-        <li><a href="#Picket-Schedule">Piket</a></li>
-        <li><a href="#Lesson-Schedule">Pelajaran</a></li>
+        <li><a href="/picket" onclick="navigateTo(event, 'picket')">Piket</a></li>
+        <li><a href="/subject" onclick="navigateTo(event, 'subject')">Pelajaran</a></li>
       </ul>
     </li>
-    <li><a href="#Gallery">Galeri</a></li>
+    <li><a href="/gallery" onclick="navigateTo(event, 'gallery')">Galeri</a></li>
   </ul>
 </nav>
 
@@ -59,7 +59,7 @@
         </li>
         <li class="list">
           <a href="#Picket-Schedule" title="Jadwal Piket">
-            <span class="icon"><ion-icon name="trash-outline"></ion-icon></span>
+            <span class="icon"><ion-icon name="sparkles-outline"></ion-icon></span>
           </a>
         <li class="list">
           <a href="#Lesson-Schedule" title="Jadwal Pelajaran">
@@ -80,7 +80,7 @@
 </section>
 
 
-    <section id="About-us" class="about">
+    <section id="about" class="about">
       <h1 data-aos="fade-in"
           data-aos-duration="1000" >Tentang Kami</h1>
       <div data-aos="fade-up" data-aos-duration="1000" class="about-text">
@@ -117,7 +117,7 @@
       </div>
     </section>
 
-    <section id="Filosofi" class="filosofi-logo">
+    <section id="filosofi" class="filosofi-logo">
   <h2 data-aos="fade-in" data-aos-duration="1000">Filosofi Logo</h2>
   <div class="filosofi-pair" data-aos="fade-up" data-aos-duration="400">
     <div class="chevron">
@@ -166,7 +166,7 @@
   </div>
 </section>
 
-    <section id="Member" class="content">
+    <section id="member" class="content">
       <h1 data-aos="fade-in" >Struktur</h1>
       <hr>
       <h5 data-aos="fade-in" >Wali Kelas</h5>
@@ -607,7 +607,7 @@
       </div>
     </section>
 
-    <section id="Picket-Schedule" class="content">
+    <section id="picket" class="content">
       <h1 data-aos="fade-in"
           data-aos-duration="1000" >Picket Schedule</h1>
       <div data-aos="fade-in"
@@ -677,7 +677,7 @@
       </div>
     </section>
 
-    <section id="Lesson-Schedule" class="content">
+    <section id="subject" class="content">
       <h1 data-aos="fade-in"
           data-aos-duration="1000" >Subject Schedule</h1>
       <div data-aos="fade-in"
@@ -696,6 +696,8 @@
           <ul>
             <li>Kejuruan Bu Wanda</li>
             <li>Kejuruan Pa Sunggono</li>
+            <li>-</li>
+            <li>-</li>
           </ul>
         </div>
         <div class="subject rabu">
@@ -704,6 +706,7 @@
             <li>Seni Budaya</li>
             <li>PJOK</li>
             <li>Informatika</li>
+          <li>-</li>
           </ul>
         </div>
         <div class="subject kamis">
@@ -712,6 +715,7 @@
             <li>Bahasa Indonesia</li>
             <li>Bahasa Inggris</li>
             <li>Matematika</li>
+          <li>-</li>
           </ul>
         </div>
         <div class="subject jumat">
@@ -726,7 +730,28 @@
       </div>
     </section>
     
-<section id="Gallery" class="content">
+    <section id="data" class="data">
+      <div data-aos="fade-in" class="container">
+        <div data-aos="fade-up" class="data-items">
+          <div class="data-card">
+            <h3>35</h3>
+            <ion-icon name="person-outline" size="100px"></ion-icon>
+          </div>
+
+          <div class="data-card">
+            <h3>23</h3>
+            <ion-icon name="female-outline" size="100px"></ion-icon>
+          </div>
+
+           <div class="data-card">
+            <h3>12</h3>
+            <ion-icon name="male-outline" size="100px"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section id="gallery" class="content">
   <h1 data-aos="fade-in">Our Photos</h1>
   <div data-aos="fade-in" class="swiper mySwiper">
     <div data-aos="fade-in" class="swiper-wrapper">
@@ -827,9 +852,31 @@
         audio.play();
       });
     </script>
+
+    <script>
+  function navigateTo(event, id) {
+    event.preventDefault();
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    history.pushState(null, '', '/' + id.toLowerCase()); // Ubah URL jadi /about-us
+  }
+
+  // Kalau user buka langsung /about di URL
+  window.addEventListener('load', () => {
+    const path = window.location.pathname.replace('/', '');
+    if (path) {
+      const section = document.getElementById(path.charAt(0).toUpperCase() + path.slice(1));
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  });
+</script>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      AOS.init();
+      AOS.init({
+    once: true
+  });
     </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
