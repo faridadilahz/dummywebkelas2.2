@@ -1230,6 +1230,7 @@ ion-icon {
   .subject {
     width: 50%; /* Biar lebar maksimal di HP */
     max-width: 400px;
+    height: auto;
   }
 }
 
