@@ -1316,23 +1316,24 @@ ion-icon {
   color: #169976;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: all 0.3s;
 }
 
 .footer-section a:hover {
   color: #1dcd9f;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
-.footer-social ion-icon {
+.footer-social a ion-icon {
   font-size: 30px;
   color: #cccccc;
   transition: all 0.5s;
   margin-right: 15px;
 }
 
-.footer-social ion-icon:hover {
+.footer-social a ion-icon:hover {
   color: #1dcd9f;
+  text-decoration: none;
 }
 
 .footer-copyright {
