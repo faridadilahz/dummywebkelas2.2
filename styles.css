@@ -389,7 +389,7 @@ body {
   #about {
     flex-direction: column;
     align-items: center;
-}
+  }
 }
 
 /*Filosofi*/
@@ -485,7 +485,7 @@ body {
 #member {
   padding: 30px 20px 60px;
   height: auto;
-  background-color: #222831;
+  background-color: #222222;
 }
 
 #member h1 {
@@ -602,7 +602,7 @@ hr {
 
 .card:hover {
   transform: scale(1.03);
-  border-bottom: 7px solid #00ffbb;
+  border-bottom: 15px solid #1dcd9f;
   filter: brightness(90%);
 }
 
@@ -745,11 +745,7 @@ ion-icon {
   }
 
   .samping p {
-    font-size: clamp(
-      0.7rem,
-      2.4vw,
-      1.5rem
-    ); /* dari 1.3rem di layar besar → 0.8rem di layar kecil */
+    font-size: clamp(0.7rem, 2.4vw, 1.5rem);
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -941,7 +937,7 @@ ion-icon {
   }
 }
 
-/* Jadwal Piket */
+/*Picket*/
 #picket {
   height: auto;
   padding: clamp(10px, 2vw, 30px) 0 clamp(40px, 8vw, 100px);
@@ -959,7 +955,7 @@ ion-icon {
 
 .card-picket {
   background: #ffffff;
-  border-bottom: 7px solid #a851ff;
+  border-bottom: 7px solid #4635b1;
   border-radius: 5px;
   width: clamp(200px, 30vw, 200px);
   height: auto;
@@ -974,9 +970,9 @@ ion-icon {
 }
 
 .card-picket:hover {
-  filter: brightness(90%);
+  filter: brightness(95%);
   transform: scale(1.02);
-  border-bottom: 7px solid #7e85ff;
+  border-bottom: 7px solid #6a53ff;
 }
 
 #picket h1 {
@@ -1055,7 +1051,7 @@ ion-icon {
 
 .subject {
   background: #ffffff;
-  border-bottom: 7px solid #a851ff;
+  border-bottom: 7px solid #ff4f0f;
   border-radius: 5px;
   width: clamp(200px, 30vw, 200px);
   height: auto;
@@ -1070,9 +1066,9 @@ ion-icon {
 }
 
 .subject:hover {
-  filter: brightness(90%);
+  filter: brightness(95%);
   transform: scale(1.02);
-  border-bottom: 7px solid #c68efd;
+  border-bottom: 7px solid #ffa673;
 }
 
 .subject h2,
@@ -1129,7 +1125,7 @@ ion-icon {
 
 /*Data*/
 .data {
-  background:#222322;
+  background: #222322;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -1152,8 +1148,8 @@ ion-icon {
 
 .data-card {
   background: white;
-  padding: 20px;
-  width: clamp(170px, 25vw, 250px);
+  padding: 10px;
+  width: clamp(170px, 20vw, 200px);
   height: auto;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -1162,13 +1158,14 @@ ion-icon {
   flex-direction: column;
   align-items: center;
   transition: 0.5s;
-  border-bottom: 8px solid #03aced;
+  border-bottom: 7px solid #074799;
   justify-content: space-between;
 }
 
 .data-card:hover {
   transform: scale(1.03);
   filter: brightness(95%);
+  border-bottom: 7px solid #0d76ff;
 }
 
 .data-card ion-icon {
@@ -1191,7 +1188,8 @@ ion-icon {
 
 @media screen and (max-width: 768px) {
   .data-items {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
   }
 }
@@ -1231,26 +1229,26 @@ ion-icon {
 .swiper-pagination-bullet {
   background-color: #494949 !important;
   opacity: 0.5 !important;
-  transform: scale(0.8);
+  transform: scale(clamp(0.6, 0.8, 1));
   transition: all 0.5s;
 }
 
 .swiper-pagination-bullet:hover {
   background-color: #d7d7d7 !important;
   opacity: 0.5 !important;
-  transform: scale(1.2);
+  transform: scale(clamp(1, 1.2, 1.4));
 }
 
 .swiper-pagination-bullet-active {
   background-color: #ffffff !important;
   opacity: 1 !important;
-  transform: scale(1.2);
+  transform: scale(clamp(1, 1.2, 1.4));
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-  margin-left: 200px;
-  margin-right: 200px;
+  margin-left: clamp(20px, 20vw, 300px);
+  margin-right: clamp(20px, 20vw, 300px);
   z-index: 10;
   color: #ffffff !important;
   transition: 0.5s;
@@ -1325,7 +1323,7 @@ ion-icon {
 }
 
 .footer-social a ion-icon {
-  font-size: 30px;
+  font-size: 50px;
   color: #cccccc;
   transition: all 0.5s;
   margin-right: 15px;
