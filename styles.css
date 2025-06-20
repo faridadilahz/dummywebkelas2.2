@@ -1200,6 +1200,7 @@ ion-icon {
   padding: 5px 0 80px;
   background: #1c1c1c;
   text-align: center;
+  justify-content: center;
   font-family: "Poppins", sans-serif;
 }
 
