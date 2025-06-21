@@ -1,53 +1,52 @@
-document.addEventListener('click', function (e) {
-    // Tutup semua dropdown jika klik di luar
-    if (!e.target.closest('.dropdown')) {
-        document.querySelectorAll('.dropdown-menu').forEach(menu => {
-            if (menu.classList.contains('show')) {
-                menu.classList.add('hide');
-                setTimeout(() => {
-                    menu.classList.remove('show', 'hide');
-                }, 300); // Sesuaikan dengan durasi animasi
-            }
-        });
-    }
+document.addEventListener("click", function (e) {
+  if (!e.target.closest(".dropdown")) {
+    document.querySelectorAll(".dropdown-menu").forEach((menu) => {
+      if (menu.classList.contains("show")) {
+        menu.classList.add("hide");
+        setTimeout(() => {
+          menu.classList.remove("show", "hide");
+        }, 300);
+      }
+    });
+  }
 });
 
 // Toggle dropdown saat diklik
-document.querySelectorAll('.dropdown-toggle').forEach(item => {
-    item.addEventListener('click', function (e) {
-        e.preventDefault();
-        const menu = this.nextElementSibling;
+document.querySelectorAll(".dropdown-toggle").forEach((item) => {
+  item.addEventListener("click", function (e) {
+    e.preventDefault();
+    const menu = this.nextElementSibling;
 
-        // Tutup dropdown lain jika ada
-        document.querySelectorAll('.dropdown-menu').forEach(otherMenu => {
-            if (otherMenu !== menu && otherMenu.classList.contains('show')) {
-                otherMenu.classList.add('hide');
-                setTimeout(() => {
-                    otherMenu.classList.remove('show', 'hide');
-                }, 300);
-            }
-        });
-
-        // Toggle dropdown yang diklik
-        if (menu.classList.contains('show')) {
-            menu.classList.add('hide');
-            setTimeout(() => {
-                menu.classList.remove('show', 'hide');
-            }, 300);
-        } else {
-            menu.classList.remove('hide');
-            menu.classList.add('show');
-        }
+    // Tutup dropdown lain jika ada
+    document.querySelectorAll(".dropdown-menu").forEach((otherMenu) => {
+      if (otherMenu !== menu && otherMenu.classList.contains("show")) {
+        otherMenu.classList.add("hide");
+        setTimeout(() => {
+          otherMenu.classList.remove("show", "hide");
+        }, 300);
+      }
     });
+
+    // Toggle dropdown yang diklik
+    if (menu.classList.contains("show")) {
+      menu.classList.add("hide");
+      setTimeout(() => {
+        menu.classList.remove("show", "hide");
+      }, 300);
+    } else {
+      menu.classList.remove("hide");
+      menu.classList.add("show");
+    }
+  });
 });
 
-  window.addEventListener("load", function () {
-    setTimeout(() => {
-      window.scrollTo(0, 0);
-      document.documentElement.style.scrollBehavior = "smooth";
-    }, 10);
-  });
-  document.documentElement.style.scrollBehavior = "auto";
+window.addEventListener("load", function () {
+  setTimeout(() => {
+    window.scrollTo(0, 0);
+    document.documentElement.style.scrollBehavior = "smooth";
+  }, 10);
+});
+document.documentElement.style.scrollBehavior = "auto";
 
 let sections = document.querySelectorAll("section");
 let secondaryNavItems = document.querySelectorAll(".secondary-nav .list a");
@@ -83,15 +82,21 @@ window.addEventListener("scroll", () => {
 
 const swiper = new Swiper(".mySwiper", {
   loop: true,
-  effect: 'fade',
-  fadeEffect: {
-    crossFade: true
+  effect: "coverflow",
+  centeredSlides: true,
+  slidesPerView: "auto",
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 100,
+    modifier: 2.5,
+    slideShadows: true,
   },
   autoplay: {
     delay: 2000,
     disableOnInteraction: false,
   },
-  speed: 1500, // kecepatan transisi (ms)
+  speed: 1500,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -111,11 +116,11 @@ button.addEventListener("click", function () {
   if (!isPlaying) {
     music.play();
     isPlaying = true;
-    icon.setAttribute("name", "pause-outline"); // ganti jadi pause
+    icon.setAttribute("name", "pause-outline");
   } else {
     music.pause();
     isPlaying = false;
-    icon.setAttribute("name", "musical-notes-outline"); // ganti balik ke musik
+    icon.setAttribute("name", "musical-notes-outline");
   }
 });
 
