@@ -1194,7 +1194,7 @@ ion-icon {
   }
 }
 
-/* Our Photos */
+/* === Our Photos Section === */
 #gallery {
   padding: 5px 0 80px;
   background: #1c1c1c;
@@ -1210,12 +1210,21 @@ ion-icon {
   font-family: "Jersey 10", cursive;
 }
 
+/* === Swiper Container === */
 .swiper {
   width: 100%;
   display: flex;
   justify-content: center;
+  position: relative;
+
+  /* Swiper Navigation Variables */
+  --swiper-navigation-size: clamp(24px, 4vw, 40px);
+  --swiper-navigation-color: #3fa0ff;
+  --swiper-navigation-top-offset: 50%;
+  --swiper-navigation-sides-offset: 0px;
 }
 
+/* === Swiper Wrapper & Slide === */
 .swiper-wrapper {
   display: flex;
   align-items: center;
@@ -1226,8 +1235,10 @@ ion-icon {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+/* === Photo Items === */
 .photo-item img {
   width: 100%;
   max-width: 600px;
@@ -1235,44 +1246,55 @@ ion-icon {
   aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
   z-index: 11;
 }
 
-.swiper-pagination-bullet {
-  background-color: #494949 !important;
-  opacity: 0.5 !important;
-  transform: scale(0.8);
-  transition: all 0.5s;
+/* === Swiper Navigation Styling === */
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: #1b242f;
+  width: clamp(40px, 10vw, 70px);
+  height: 100%;
+  border-radius: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
 }
 
-.swiper-pagination-bullet:hover {
-  background-color: #d7d7d7 !important;
-  transform: scale(1.2);
-}
-
-.swiper-pagination-bullet-active {
-  background-color: #ffffff !important;
-  opacity: 1 !important;
-  transform: scale(1.2);
-}
-
-.swiper-button-next,
 .swiper-button-prev {
-  margin-left: clamp(20px, 10vw, 300px);
-  margin-right: clamp(20px, 10vw, 300px);
-  z-index: 10;
-  color: #ffffff !important;
-  transition: 0.5s;
+  left: 0;
 }
 
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-  transform: translateY(-50%) scale(0.85);
+.swiper-button-next {
+  right: 0;
 }
 
-/* Responsive */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: clamp(24px, 5vw, 32px);
+  font-weight: bold;
+  color: var(--swiper-navigation-color);
+}
+
+.swiper-slide {
+  opacity: 0.3;
+  transform: scale(0.9);
+  transition: 0.5s ease;
+}
+
+.swiper-slide-active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
+
+@media screen and (max-width: 1024px) {
+}
+
 @media screen and (max-width: 768px) {
   #gallery {
     display: flex;
@@ -1285,14 +1307,14 @@ ion-icon {
   }
 
   .photo-item img {
-    width: 80%;
+    width: 70%;
     max-width: 500px;
   }
 
   .swiper-button-next,
   .swiper-button-prev {
     margin-left: clamp(0px, 10vw, 50px);
-    margin-right: clamp(0px, 10vw, 200px);
+    margin-right: clamp(0px, 10vw, 50px);
   }
 
   .swiper {
@@ -1308,6 +1330,13 @@ ion-icon {
   }
 }
 
+@media screen and (max-width: 500px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
 /*Footer*/
 .footer-section {
   background-color: #222831;
