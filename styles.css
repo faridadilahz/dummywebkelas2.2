@@ -1253,10 +1253,8 @@ ion-icon {
 /* === Swiper Navigation Styling === */
 .swiper-button-prev,
 .swiper-button-next {
-  background-color: #1b242f;
   width: clamp(40px, 10vw, 70px);
   height: 100%;
-  border-radius: 20px;
   top: 50%;
   transform: translateY(-50%);
   display: flex;
@@ -1307,7 +1305,16 @@ ion-icon {
     width: 70%;
     max-width: 500px;
   }
-  
+
+  .swiper-button-prev {
+  left: 0;
+}
+
+.swiper-button-next {
+  right: 0;
+}
+}
+
 /*Footer*/
 .footer-section {
   background-color: #222831;
