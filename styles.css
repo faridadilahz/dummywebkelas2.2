@@ -1194,31 +1194,44 @@ ion-icon {
   }
 }
 
-/*Our Photos*/
+/* Our Photos */
 #gallery {
-  height: 100dvh;
   padding: 5px 0 80px;
   background: #1c1c1c;
   text-align: center;
-  justify-content: center;
   font-family: "Poppins", sans-serif;
 }
 
 #gallery h1 {
   font-size: clamp(50px, 10vw, 80px);
-  text-align: center;
   margin-top: clamp(20px, 6vw, 40px);
   margin-bottom: clamp(20px, 8vw, 30px);
   color: #ffffff;
   font-family: "Jersey 10", cursive;
 }
 
-.photo-item {
-  text-align: center;
+.swiper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.swiper-slide {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .photo-item img {
-  width: clamp(300px, 50%, 600px);
+  width: 100%;
+  max-width: 600px;
+  height: auto;
   aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: 12px;
@@ -1230,26 +1243,25 @@ ion-icon {
 .swiper-pagination-bullet {
   background-color: #494949 !important;
   opacity: 0.5 !important;
-  transform: scale(clamp(0.6, 0.8, 1));
+  transform: scale(0.8);
   transition: all 0.5s;
 }
 
 .swiper-pagination-bullet:hover {
   background-color: #d7d7d7 !important;
-  opacity: 0.5 !important;
-  transform: scale(clamp(1, 1.2, 1.4));
+  transform: scale(1.2);
 }
 
 .swiper-pagination-bullet-active {
   background-color: #ffffff !important;
   opacity: 1 !important;
-  transform: scale(clamp(1, 1.2, 1.4));
+  transform: scale(1.2);
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-  margin-left: clamp(20px, 20vw, 300px);
-  margin-right: clamp(20px, 20vw, 300px);
+  margin-left: clamp(20px, 10vw, 300px);
+  margin-right: clamp(20px, 10vw, 300px);
   z-index: 10;
   color: #ffffff !important;
   transition: 0.5s;
@@ -1260,10 +1272,52 @@ ion-icon {
   transform: scale(0.8);
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+  display: block;
+}
+
+.swiper-controls {
+  display: none;
+}
+
+/* Responsive */
 @media screen and (max-width: 768px) {
   #gallery {
+    display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .swiper {
+    width: 100%;
+  }
+
+  .photo-item img {
+    width: 80%;
+    max-width: 500px;
+  }
+
+  .swiper-slide {
+    flex-direction: column;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    margin-left: clamp(20px, 0vw, 300px);
+    margin-right: clamp(20px, 0vw, 300px);
+  }
+
+  .swiper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .swiper-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
   }
 }
 
@@ -1295,7 +1349,7 @@ ion-icon {
 }
 
 .footer-section h2 {
-  font-size: 38px;
+  font-size: clamp(24px, 6vw, 30px);
   font-weight: 900;
 }
 
@@ -1305,7 +1359,7 @@ ion-icon {
 }
 
 .footer-section p {
-  font-size: 24px;
+  font-size: clamp(16px, 4vw, 24px);
   margin-top: 10px;
   color: #ffffff;
   text-align: left;
@@ -1324,7 +1378,7 @@ ion-icon {
 }
 
 .footer-social a ion-icon {
-  font-size: 50px;
+  font-size: clamp(25px, 10vw, 40px);
   color: #cccccc;
   transition: all 0.5s;
   margin-right: 15px;
@@ -1357,23 +1411,13 @@ ion-icon {
     margin-bottom: 0px;
   }
 
-  .footer-section h2 {
-    font-size: 54px;
-  }
-
-  .footer-section h3 {
-    font-size: 38px;
-  }
-
   .footer-section p {
     margin-top: 20px;
-    font-size: 33px;
     text-align: center;
   }
 
   .footer-social ion-icon {
     margin-top: 20px;
-    font-size: 50px;
     color: #cccccc;
     transition: all 0.5s;
     margin-left: 10px;
