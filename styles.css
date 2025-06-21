@@ -1269,16 +1269,7 @@ ion-icon {
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  transform: scale(0.8);
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-  display: block;
-}
-
-.swiper-controls {
-  display: none;
+  transform: translateY(-50%) scale(0.85);
 }
 
 /* Responsive */
@@ -1298,14 +1289,10 @@ ion-icon {
     max-width: 500px;
   }
 
-  .swiper-slide {
-    flex-direction: column;
-  }
-
   .swiper-button-next,
   .swiper-button-prev {
-    margin-left: clamp(20px, 0vw, 300px);
-    margin-right: clamp(20px, 0vw, 300px);
+    margin-left: clamp(0px, 10vw, 50px);
+    margin-right: clamp(0px, 10vw, 200px);
   }
 
   .swiper {
@@ -1349,7 +1336,7 @@ ion-icon {
 }
 
 .footer-section h2 {
-  font-size: clamp(24px, 6vw, 30px);
+  font-size: clamp(40px, 6vw, 50px);
   font-weight: 900;
 }
 
@@ -1359,7 +1346,7 @@ ion-icon {
 }
 
 .footer-section p {
-  font-size: clamp(16px, 4vw, 24px);
+  font-size: clamp(24px, 6vw, 30px);
   margin-top: 10px;
   color: #ffffff;
   text-align: left;
@@ -1428,5 +1415,9 @@ ion-icon {
   .footer-section {
     flex-direction: column;
     align-items: center;
+  }
+
+  .footer-copyright {
+    margin-bottom: 100px;
   }
 }
