@@ -1292,9 +1292,6 @@ ion-icon {
   z-index: 2;
 }
 
-@media screen and (max-width: 1024px) {
-}
-
 @media screen and (max-width: 768px) {
   #gallery {
     display: flex;
@@ -1310,33 +1307,7 @@ ion-icon {
     width: 70%;
     max-width: 500px;
   }
-
-  .swiper-button-next,
-  .swiper-button-prev {
-    margin-left: clamp(0px, 10vw, 50px);
-    margin-right: clamp(0px, 10vw, 50px);
-  }
-
-  .swiper {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .swiper-controls {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .swiper-button-next,
-  .swiper-button-prev {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-}
+  
 /*Footer*/
 .footer-section {
   background-color: #222831;
