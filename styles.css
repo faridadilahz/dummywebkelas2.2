@@ -335,7 +335,7 @@ body {
 .about p {
   text-align: left;
   width: 60%;
-  font-size: 20px;
+  font-size: clamp(16px, 2vw, 20px);
   line-height: 1.2;
 }
 
@@ -368,7 +368,7 @@ body {
     width: 70%;
     text-align: center;
     justify-items: center;
-    font-size: clamp(18px, 4vw, 40px);
+    font-size: clamp(16px, 2vw, 20px);
     justify-content: center;
   }
 
