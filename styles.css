@@ -619,43 +619,47 @@ body {
   box-shadow: 0 0 20px 5px #00ff261a;
   border-bottom: 7px solid #169976;
   margin: 15px;
-  padding: 5px;
+  padding: 10px;
   width: clamp(180px, 14%, 230px);
-  height: auto;
+  height: 50%;
   border-radius: 5px;
   text-align: center;
   position: relative;
   overflow: hidden;
   margin-bottom: 20px;
-  transition: 0.5s;
+  transition: all 0.5s;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .card-1 span {
-  font-size: clamp(1rem, 4vw, 1.8rem);
-  display: block;
-  margin-top: 10px;
-  font-weight: 100;
-  color: #000000;
-  text-align: center;
-  margin-bottom: 30px;
+  margin: 5px;
+}
+
+.card-1:hover {
+  transform: scale(1.03);
+  border-bottom: 15px solid #1dcd9f;
+  filter: brightness(90%);
 }
 
 .card-1 img {
   border-radius: 0px;
   width: 100%;
+  height: calc(100% * (4 / 3));
   display: block;
   object-fit: cover;
   margin-bottom: 10px;
   border-radius: 5px;
-  margin-top: 10px;
 }
 
-.card-1:hover {
-  transform: scale(1.03);
-  filter: brightness(90%);
-  border-bottom: 7px solid #00ffbb;
+.card-1 span {
+  font-size: 36px;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  font-weight: 500;
+  color: #000000;
+  text-align: center;
 }
 
 hr {
@@ -1106,6 +1110,7 @@ ion-icon {
 .card-picket h2,
 .card-picket ul {
   margin: 0;
+  width: 100%;
 }
 
 .card-picket h2 {
