@@ -230,7 +230,6 @@ body {
     color: #000;
   }
 
-  .secondary-nav ul li a:hover ion-icon,
   .secondary-nav ul li.active a ion-icon {
     font-size: clamp(25px, 8vw, 40px);
     color: #1dcd9f;
@@ -317,7 +316,7 @@ body {
 }
 
 .about h1 {
-  font-size: clamp(50px, 10vw, 80px);
+  font-size: 66px;
   text-align: center;
   margin-bottom: clamp(40px, 10vw, 100px);
 }
@@ -334,8 +333,8 @@ body {
 
 .about p {
   text-align: left;
-  width: 60%;
-  font-size: clamp(16px, 2vw, 20px);
+  width: auto;
+  font-size: 28px;
   line-height: 1.2;
 }
 
@@ -365,10 +364,10 @@ body {
 
   .about p {
     margin: 0 auto;
-    width: 70%;
+    width: auto;
     text-align: center;
     justify-items: center;
-    font-size: clamp(16px, 2vw, 20px);
+    font-size: 24px;
     justify-content: center;
   }
 
@@ -385,10 +384,41 @@ body {
   }
 }
 
+@media screen and (max-width: 1068px) {
+  #about {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about h1 {
+    font-size: 58px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   #about {
     flex-direction: column;
     align-items: center;
+  }
+
+  .about h1 {
+  font-size: 42px;
+  }
+
+  .about p {
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    justify-items: center;
+    font-size: 19px;
+    justify-content: center;
+  }
+
+  .about-img img {
+    margin-top: 0px;
+    margin-bottom: 30px;
+    width: 60%;
+    height: auto;
   }
 }
 
@@ -1307,12 +1337,12 @@ ion-icon {
   }
 
   .swiper-button-prev {
-  left: 0;
-}
+    left: 0;
+  }
 
-.swiper-button-next {
-  right: 0;
-}
+  .swiper-button-next {
+    right: 0;
+  }
 }
 
 /*Footer*/
