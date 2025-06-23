@@ -176,7 +176,7 @@
     </section>
 
     <section id="filosofi" class="filosofi-logo">
-      <h2 data-aos="fade-in" data-aos-duration="1000">Filosofi Logo</h2>
+      <h1 data-aos="fade-in" data-aos-duration="1000">Filosofi Logo</h1>
       <div class="filosofi-pair" data-aos="fade-up" data-aos-duration="400">
         <div class="chevron">
           <img src="img/Chevrons Kiri.png" alt="Chevron Kiri" />
@@ -952,10 +952,10 @@
         var btn = document.getElementById("music-button");
         btn.addEventListener("click", function () {
           if (audio.paused) {
-            audio.play();
+            audio.pause();
             btn.title = "Pause Djo - End Of Beginning";
           } else {
-            audio.pause();
+            audio.play();
             btn.title = "Play Djo - End Of Beginning";
           }
         });
