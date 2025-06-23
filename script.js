@@ -87,10 +87,37 @@ const swiper = new Swiper(".mySwiper", {
   slidesPerView: "auto",
   coverflowEffect: {
     rotate: 0,
-    stretch: 150,
+    stretch: 150, // default
     depth: 100,
     modifier: 2.5,
     slideShadows: false,
+  },
+  breakpoints: {
+    320: {
+      coverflowEffect: {
+        stretch: 30,
+      },
+    },
+    480: {
+      coverflowEffect: {
+        stretch: 60,
+      },
+    },
+    768: {
+      coverflowEffect: {
+        stretch: 100,
+      },
+    },
+    1024: {
+      coverflowEffect: {
+        stretch: 150,
+      },
+    },
+    1440: {
+      coverflowEffect: {
+        stretch: 200,
+      },
+    },
   },
   autoplay: {
     delay: 2000,
