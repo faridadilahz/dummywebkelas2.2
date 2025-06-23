@@ -424,6 +424,17 @@ body {
   }
 }
 
+@media screen and (max-width: 960px) {
+  .about p {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .about p {
+    font-size: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .about-content {
     flex-direction: column-reverse;
@@ -562,7 +573,6 @@ body {
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
-    margin-left: -40px;
     height: auto;
     padding: 10px 0 20px;
   }
@@ -714,7 +724,7 @@ hr {
 }
 
 .card span {
-  font-size: clamp(1.5rem, 4vw, 1.8rem);
+  font-size: 36px;
   display: block;
   margin-top: 10px;
   font-weight: 500;
@@ -731,13 +741,13 @@ hr {
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
-  gap: 6px;
-  margin: 4px 0;
+  gap: 10px;
+  margin: 0 auto;
   overflow: hidden;
 }
 
 .samping p {
-  font-size: clamp(0.9rem, 2.5vw, 1.3rem);
+  font-size: 18px;
   color: #000000;
   font-weight: 100;
   white-space: nowrap;
@@ -761,6 +771,19 @@ ion-icon {
   #member h5 {
     font-size: 48px;
   }
+
+  .card span {
+    font-size: 38px;
+  }
+
+  .samping {
+    gap: 15px;
+    margin: 0 auto;
+  }
+
+  .samping p {
+    font-size: 20px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -774,26 +797,17 @@ ion-icon {
     width: 95%;
   }
 
-  .samping {
-    gap: clamp(8px, 1.5vw, 10px);
-    margin: 4px auto;
-    align-items: center;
-  }
-
-  .samping p {
-    font-size: clamp(1rem, 2.2vw, 1.3rem);
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
   ion-icon {
-    margin-inline-start: clamp(25px, 3vw, 40px);
     font-size: clamp(1rem, 2.2vw, 1.3rem);
     flex-shrink: 0;
   }
 }
-
+@media screen and (max-width: 900px) {
+  .samping {
+    gap: 5px;
+    margin: 0 auto;
+  }
+}
 @media screen and (max-width: 768px) {
   #member h1 {
     font-size: 52px;
@@ -813,21 +827,23 @@ ion-icon {
     width: 95%;
   }
 
+  .card span {
+    font-size: 32px;
+  }
+
   .samping {
-    gap: clamp(8px, 1vw, 15px);
-    margin: 4px auto;
-    align-items: center;
+    gap: 10px;
+    margin: 0 auto;
   }
 
   .samping p {
-    font-size: clamp(0.7rem, 2.4vw, 1.5rem);
+    font-size: 18px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
 
   ion-icon {
-    margin-inline-start: clamp(0px, 4vw, 45px);
     font-size: clamp(1rem, 2vw, 1.3rem);
     flex-shrink: 0;
   }
@@ -845,20 +861,18 @@ ion-icon {
   }
 
   .samping {
-    gap: clamp(8px, 1vw, 15px);
-    margin: 4px auto;
-    align-items: center;
+    gap: 10px;
+    margin: 0 auto;
   }
 
   .samping p {
-    font-size: clamp(0.7rem, 2.4vw, 1.5rem);
+    font-size: 15px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
 
   ion-icon {
-    margin-inline-start: clamp(0px, 4vw, 20px);
     font-size: clamp(1rem, 2vw, 1.3rem);
     flex-shrink: 0;
   }
@@ -876,14 +890,12 @@ ion-icon {
   }
 
   .samping {
-    font-size: clamp(0.3rem, 2vw, 1rem);
-    gap: clamp(1px, 1.5vw, 1px);
-    margin: 4px auto;
-    align-items: center;
+    gap: 5px;
+    margin: 0 auto;
   }
 
   .samping p {
-    font-size: clamp(0.3rem, 2.5vw, 1rem);
+    font-size: 15px;
     overflow: hidden;
     margin-left: 5px;
     text-overflow: ellipsis;
@@ -891,12 +903,17 @@ ion-icon {
   }
 
   ion-icon {
-    margin-inline-start: clamp(5px, 5vw, 15px);
     font-size: clamp(1rem, 2vw, 1.3rem);
     flex-shrink: 0;
   }
 }
 
+@media screen and (max-width: 550px) {
+  .samping {
+    gap: 0px;
+    margin: 0 -5px;
+  }
+}
 @media screen and (max-width: 500px) {
   .card,
   .card-1 {
@@ -909,26 +926,29 @@ ion-icon {
   }
 
   .samping {
-    font-size: clamp(0.3rem, 2vw, 1rem);
-    gap: clamp(1px, 1.5vw, 1px);
-    margin: 4px auto;
-    align-items: center;
+    gap: 0px;
+    margin: 0 auto;
   }
 
   .samping p {
-    font-size: clamp(0.3rem, 3vw, 1rem);
+    font-size: 15px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
 
   ion-icon {
-    margin-inline-start: clamp(5px, 5vw, 15px);
     font-size: clamp(0.9rem, 2vw, 1.3rem);
     flex-shrink: 0;
   }
 }
 
+@media screen and (max-width: 450px) {
+  .samping {
+    gap: 0px;
+    margin: 0 -5px;
+  }
+}
 @media screen and (max-width: 400px) {
   .card,
   .card-1 {
@@ -940,22 +960,23 @@ ion-icon {
     width: 95%;
   }
 
+  .card span {
+    font-size: 28px;
+  }
+
   .samping {
-    font-size: clamp(0.3rem, 2vw, 1rem);
-    gap: clamp(1px, 1.5vw, 1px);
-    margin: 4px auto;
-    align-items: center;
+    gap: 0px;
+    margin: 0 -5px;
   }
 
   .samping p {
-    font-size: clamp(0.3rem, 2.9vw, 1rem);
+    font-size: 12px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
 
   ion-icon {
-    margin-inline-start: clamp(5px, 5vw, 25px);
     font-size: clamp(0.7rem, 2vw, 1.3rem);
     flex-shrink: 0;
   }
@@ -982,21 +1003,18 @@ ion-icon {
   }
 
   .samping {
-    font-size: clamp(0.3rem, 2vw, 1rem);
-    gap: clamp(1px, 1.5vw, 1px);
-    margin: 4px auto;
-    align-items: center;
+    gap: 0px;
+    margin: 0 -5px;
   }
 
   .samping p {
-    font-size: clamp(0.6rem, 2.5vw, 1rem);
+    font-size: 12px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
 
   ion-icon {
-    margin-inline-start: clamp(5px, 3vw, 10px);
     font-size: clamp(0.7rem, 2vw, 1.3rem);
     flex-shrink: 0;
   }
@@ -1023,21 +1041,18 @@ ion-icon {
   }
 
   .samping {
-    font-size: clamp(0.3rem, 2vw, 1rem);
-    gap: clamp(1px, 1.5vw, 1px);
-    margin: 0px auto;
-    align-items: center;
+    gap: 0px;
+    margin: 0 -10px;
   }
 
   .samping p {
-    font-size: clamp(0.6rem, 2.5vw, 1rem);
+    font-size: 10px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
 
   ion-icon {
-    margin-inline-start: clamp(5px, 3vw, 0px);
     font-size: clamp(0.5rem, 2vw, 1.3rem);
     flex-shrink: 0;
   }
@@ -1427,10 +1442,10 @@ ion-icon {
     font-size: 68px;
   }
 
-    .swiper-button-prev,
-.swiper-button-next {
-  margin: 0 -130px;
-}
+  .swiper-button-prev,
+  .swiper-button-next {
+    margin: 0 -130px;
+  }
 }
 @media screen and (max-width: 768px) {
   #gallery h1 {
@@ -1453,9 +1468,9 @@ ion-icon {
   }
 
   .swiper-button-prev,
-.swiper-button-next {
-  margin: 0 -150px;
-}
+  .swiper-button-next {
+    margin: 0 -150px;
+  }
 
   .swiper-button-prev {
     left: 0;
@@ -1589,7 +1604,6 @@ ion-icon {
 }
 
 @media screen and (max-width: 768px) {
-
   .footer-section h2 {
     font-size: 32px;
   }
