@@ -320,51 +320,52 @@ body {
   }
 }
 
-/*About Us Section*/
+/*About*/
 .about {
-  text-align: center;
-  color: white;
-  padding: 1px 20px 70px;
-  height: auto;
   background-color: #1a1a1d;
-}
-
-.about-img {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  margin-top: 50px;
+  color: white;
+  padding: 20px 0 80px;
+  text-align: center;
 }
 
 .about h1 {
   font-size: 76px;
-  text-align: center;
-  margin-bottom: clamp(40px, 10vw, 100px);
+  margin-bottom: clamp(40px, 10vw, 50px);
+}
+
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  text-align: left;
 }
 
 .about-text {
-  display: flex;
-  margin-top: -50px;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 150px;
-  justify-content: center;
-  padding: 0 20px;
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
 }
 
-.about p {
-  text-align: left;
-  width: auto;
+.about-text p {
   font-size: 28px;
-  line-height: 1.2;
+  line-height: 1;
+}
+
+.about-img {
+  flex: 1;
+  min-width: 250px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .about-img img {
-  margin-bottom: 15px;
-  margin-top: -30px;
-  float: right;
   width: 100%;
-  height: 150px;
+  height: auto;
   filter: grayscale(1);
 }
 
@@ -386,7 +387,7 @@ body {
   .about p {
     margin: 0 auto;
     width: auto;
-    text-align: center;
+    text-align: left;
     justify-items: center;
     font-size: 24px;
     justify-content: center;
@@ -398,9 +399,7 @@ body {
   }
 
   .about-img img {
-    margin-top: 0px;
-    margin-bottom: 30px;
-    width: 65%;
+    width: 70%;
     height: auto;
   }
 }
@@ -414,9 +413,24 @@ body {
   .about h1 {
     font-size: 68px;
   }
+
+  .about p {
+    font-size: 24px;
+  }
+
+  .about-img img {
+    width: 85%;
+    height: auto;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .about-content {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+
   #about {
     flex-direction: column;
     align-items: center;
@@ -429,16 +443,14 @@ body {
   .about p {
     margin: 0 auto;
     width: 80%;
-    text-align: center;
+    text-align: left;
     justify-items: center;
     font-size: 19px;
     justify-content: center;
   }
 
   .about-img img {
-    margin-top: 0px;
-    margin-bottom: 30px;
-    width: 60%;
+    width: 80%;
     height: auto;
   }
 }
@@ -1108,13 +1120,13 @@ ion-icon {
 
 @media screen and (max-width: 1068px) {
   #picket h1 {
-  font-size: 68px;
+    font-size: 68px;
   }
 }
 
 @media screen and (max-width: 768px) {
   #picket h1 {
-  font-size: 52px;
+    font-size: 52px;
   }
 
   .grid-container {
@@ -1221,13 +1233,13 @@ ion-icon {
 
 @media screen and (max-width: 1068px) {
   #subject h1 {
-  font-size: 68px;
+    font-size: 68px;
   }
 }
 
 @media screen and (max-width: 768px) {
   #subject h1 {
-  font-size: 52px;
+    font-size: 52px;
   }
 
   .subject {
@@ -1324,7 +1336,6 @@ ion-icon {
   font-family: "Jersey 10", cursive;
 }
 
-/* === Swiper Container === */
 .swiper {
   width: 100%;
   display: flex;
@@ -1333,12 +1344,11 @@ ion-icon {
 
   /* Swiper Navigation Variables */
   --swiper-navigation-size: clamp(24px, 4vw, 40px);
-  --swiper-navigation-color: #ffffff;
+  --swiper-navigation-color: #ffffff !important;
   --swiper-navigation-top-offset: 50%;
   --swiper-navigation-sides-offset: 0px;
 }
 
-/* === Swiper Wrapper & Slide === */
 .swiper-wrapper {
   display: flex;
   align-items: center;
@@ -1352,7 +1362,6 @@ ion-icon {
   transition: all 0.5s;
 }
 
-/* === Photo Items === */
 .photo-item img {
   width: 100%;
   max-width: 600px;
@@ -1361,6 +1370,17 @@ ion-icon {
   border-radius: 12px;
   transition: all 0.5s;
   z-index: 11;
+}
+
+.swiper-pagination-bullet {
+  background-color: #ffffff !important;
+  opacity: 0.6;
+  transition: all 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #ffffff !important;
+  opacity: 1;
 }
 
 .swiper-button-prev,
@@ -1404,12 +1424,17 @@ ion-icon {
 
 @media screen and (max-width: 1068px) {
   #gallery h1 {
-  font-size: 68px;
+    font-size: 68px;
   }
+
+    .swiper-button-prev,
+.swiper-button-next {
+  margin: 0 -130px;
+}
 }
 @media screen and (max-width: 768px) {
   #gallery h1 {
-  font-size: 52px;
+    font-size: 52px;
   }
 
   #gallery {
@@ -1426,6 +1451,11 @@ ion-icon {
     width: 70%;
     max-width: 500px;
   }
+
+  .swiper-button-prev,
+.swiper-button-next {
+  margin: 0 -150px;
+}
 
   .swiper-button-prev {
     left: 0;
@@ -1464,7 +1494,7 @@ ion-icon {
 }
 
 .footer-section h2 {
-  font-size: clamp(40px, 6vw, 50px);
+  font-size: 56px;
   font-weight: 900;
 }
 
@@ -1474,7 +1504,7 @@ ion-icon {
 }
 
 .footer-section p {
-  font-size: clamp(24px, 6vw, 30px);
+  font-size: 28px;
   margin-top: 10px;
   color: #ffffff;
   text-align: left;
@@ -1493,15 +1523,15 @@ ion-icon {
 }
 
 .footer-social a ion-icon {
-  font-size: clamp(25px, 10vw, 40px);
+  font-size: 56px;
   color: #cccccc;
   transition: all 0.5s;
-  margin-right: 15px;
+  margin: 0 15px;
 }
 
 .footer-social a ion-icon:hover {
   color: #1dcd9f;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .footer-copyright {
@@ -1509,8 +1539,27 @@ ion-icon {
   text-align: center;
   color: #b0a6c1;
   margin-top: 20px;
-  font-size: 14px;
+  font-size: 18px;
   bottom: 0;
+}
+
+@media screen and (max-width: 1068px) {
+  .footer-section h2 {
+    font-size: 48px;
+  }
+
+  .footer-section p {
+    font-size: 24px;
+    text-align: left;
+  }
+
+  .footer-social a ion-icon {
+    font-size: 48px;
+  }
+
+  .footer-copyright {
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -1528,7 +1577,7 @@ ion-icon {
 
   .footer-section p {
     margin-top: 20px;
-    text-align: center;
+    text-align: left;
   }
 
   .footer-social ion-icon {
@@ -1540,12 +1589,29 @@ ion-icon {
 }
 
 @media screen and (max-width: 768px) {
+
+  .footer-section h2 {
+    font-size: 32px;
+  }
+
+  .footer-section p {
+    font-size: 19px;
+    text-align: center;
+  }
+
   .footer-section {
     flex-direction: column;
     align-items: center;
+    gap: 50px;
+  }
+
+  .footer-social a ion-icon {
+    font-size: 32px;
+    margin: 0 10px;
   }
 
   .footer-copyright {
     margin-bottom: 100px;
+    font-size: 9px;
   }
 }
