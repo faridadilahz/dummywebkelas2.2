@@ -258,7 +258,7 @@ body {
   justify-content: center;
   align-items: flex-start;
   text-align: left;
-  padding: 0 clamp(20px, 6vw, 60px); /* adaptif padding */
+  padding: 0 clamp(20px, 6vw, 60px);
   position: relative;
   color: white;
   overflow: hidden;
@@ -279,24 +279,45 @@ body {
 }
 
 .hero span {
-  font-size: clamp(30px, 4vw, 35px); /* responsif span */
+  font-size: 31px;
+  letter-spacing: 3px;
   margin: 0;
   padding-bottom: 2px;
   text-shadow: 0 0 5px #ffffff;
 }
 
 .hero h1 {
-  font-size: clamp(80px, 10vw, 100px); /* responsif h1 */
-  letter-spacing: clamp(2px, 1vw, 10px);
+  font-size: 76px;
+  letter-spacing: 10px;
   font-weight: 600;
   margin: 0;
   text-shadow: 0 0 5px #ffffff;
 }
 
 .hero h1 sup {
-  font-size: clamp(30px, 5vw, 50px); /* responsif sup */
+  font-size: 26px;
   vertical-align: text-top;
   line-height: 1.5;
+}
+
+@media screen and (max-width: 1068px) {
+  .hero span {
+    font-size: 27px;
+  }
+
+  .hero h1 {
+    font-size: 68px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero span {
+    font-size: 22px;
+  }
+
+  .hero h1 {
+    font-size: 52px;
+  }
 }
 
 /*About Us Section*/
@@ -316,7 +337,7 @@ body {
 }
 
 .about h1 {
-  font-size: 66px;
+  font-size: 76px;
   text-align: center;
   margin-bottom: clamp(40px, 10vw, 100px);
 }
@@ -391,7 +412,7 @@ body {
   }
 
   .about h1 {
-    font-size: 58px;
+    font-size: 68px;
   }
 }
 
@@ -402,7 +423,7 @@ body {
   }
 
   .about h1 {
-  font-size: 42px;
+    font-size: 52px;
   }
 
   .about p {
@@ -433,8 +454,8 @@ body {
   background-color: #1e1e28;
 }
 
-.filosofi-logo h2 {
-  font-size: clamp(50px, 10vw, 80px);
+.filosofi-logo h1 {
+  font-size: 76px;
   margin-bottom: clamp(20px, 5vw, 40px);
 }
 
@@ -462,7 +483,7 @@ body {
 
 .filosofi-pair .text-box {
   flex: 1;
-  font-size: clamp(20px, 2.5vw, 25px);
+  font-size: 28px;
   max-width: clamp(200px, 50vw, 500px);
   line-height: clamp(1.3, 2vw, 1.5);
   text-align: left;
@@ -470,8 +491,8 @@ body {
 }
 
 .summary {
-  margin-top: clamp(20px, 4vw, 40px);
-  font-size: clamp(20px, 2.5vw, 25px);
+  margin-top: 80px;
+  font-size: 28px;
   line-height: clamp(1.3, 2vw, 1.5);
   max-width: min(80%, 700px);
   margin-left: auto;
@@ -479,11 +500,30 @@ body {
   text-align: center;
 }
 
+@media screen and (max-width: 1068px) {
+  .filosofi-logo h1 {
+    font-size: 68px;
+  }
+
+  .filosofi-pair .text-box {
+    font-size: 24px;
+  }
+
+  .summary {
+    font-size: 24px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   #filosofi {
     height: auto;
     padding: 10px 0 80px;
   }
+
+  .filosofi-logo h1 {
+    font-size: 53px;
+  }
+
   .filosofi-pair {
     flex-direction: row;
     flex-wrap: nowrap;
@@ -497,6 +537,11 @@ body {
 
   .filosofi-pair .text-box {
     flex: 1;
+    font-size: 19px;
+  }
+
+  .summary {
+    font-size: 19px;
   }
 }
 
@@ -519,15 +564,15 @@ body {
 }
 
 #member h1 {
-  font-size: clamp(50px, 10vw, 80px);
+  font-size: 76px;
   text-align: center;
   margin: 20px 0;
-  margin-bottom: 0px;
+  margin-bottom: 40px;
   color: #ffffff;
 }
 
 #member h5 {
-  font-size: clamp(35px, 8vw, 50px);
+  font-size: 56px;
   font-weight: 400;
   text-align: center;
   margin: 20px 0;
@@ -535,6 +580,7 @@ body {
   margin-top: 30px;
   color: #ffffff;
 }
+
 .card-1-container {
   display: flex;
   flex-direction: row;
@@ -695,6 +741,16 @@ ion-icon {
   flex-shrink: 0;
 }
 
+@media screen and (max-width: 1068px) {
+  #member h1 {
+    font-size: 68px;
+  }
+
+  #member h5 {
+    font-size: 48px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .card,
   .card-1 {
@@ -727,6 +783,14 @@ ion-icon {
 }
 
 @media screen and (max-width: 768px) {
+  #member h1 {
+    font-size: 52px;
+  }
+
+  #member h5 {
+    font-size: 32px;
+  }
+
   .card,
   .card-1 {
     width: 30%;
@@ -1006,7 +1070,7 @@ ion-icon {
 }
 
 #picket h1 {
-  font-size: clamp(50px, 10vw, 80px);
+  font-size: 76px;
   text-align: center;
   color: #ffffff;
   margin-bottom: clamp(20px, 8vw, 30px);
@@ -1042,7 +1106,17 @@ ion-icon {
   text-align: center;
 }
 
+@media screen and (max-width: 1068px) {
+  #picket h1 {
+  font-size: 68px;
+  }
+}
+
 @media screen and (max-width: 768px) {
+  #picket h1 {
+  font-size: 52px;
+  }
+
   .grid-container {
     flex-direction: column;
     align-items: center;
@@ -1063,7 +1137,7 @@ ion-icon {
 }
 
 #subject h1 {
-  font-size: clamp(50px, 10vw, 80px);
+  font-size: 76px;
   text-align: center;
   margin-top: clamp(20px, 6vw, 40px);
   margin-bottom: clamp(20px, 8vw, 30px);
@@ -1145,7 +1219,17 @@ ion-icon {
   line-height: 1.4;
 }
 
+@media screen and (max-width: 1068px) {
+  #subject h1 {
+  font-size: 68px;
+  }
+}
+
 @media screen and (max-width: 768px) {
+  #subject h1 {
+  font-size: 52px;
+  }
+
   .subject {
     width: 50%;
     max-width: 400px;
@@ -1224,7 +1308,7 @@ ion-icon {
   }
 }
 
-/* === Our Photos Section === */
+/*Gallery*/
 #gallery {
   padding: 5px 0 80px;
   background: #1c1c1c;
@@ -1233,7 +1317,7 @@ ion-icon {
 }
 
 #gallery h1 {
-  font-size: clamp(50px, 10vw, 80px);
+  font-size: 76px;
   margin-top: clamp(20px, 6vw, 40px);
   margin-bottom: clamp(20px, 8vw, 30px);
   color: #ffffff;
@@ -1274,7 +1358,6 @@ ion-icon {
   max-width: 600px;
   height: auto;
   aspect-ratio: 16 / 9;
-  object-fit: cover;
   border-radius: 12px;
   transition: all 0.3s ease;
   z-index: 11;
@@ -1309,7 +1392,7 @@ ion-icon {
 }
 
 .swiper-slide {
-  opacity: 0.3;
+  opacity: 0.5;
   transform: scale(0.9);
   transition: 0.5s ease;
 }
@@ -1320,7 +1403,16 @@ ion-icon {
   z-index: 2;
 }
 
+@media screen and (max-width: 1068px) {
+  #gallery h1 {
+  font-size: 68px;
+  }
+}
 @media screen and (max-width: 768px) {
+  #gallery h1 {
+  font-size: 52px;
+  }
+
   #gallery {
     display: flex;
     flex-direction: column;
