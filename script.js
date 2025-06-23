@@ -90,7 +90,7 @@ const swiper = new Swiper(".mySwiper", {
     stretch: 150,
     depth: 100,
     modifier: 2.5,
-    slideShadows: true,
+    slideShadows: false,
   },
   autoplay: {
     delay: 2000,
