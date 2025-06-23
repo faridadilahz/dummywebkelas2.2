@@ -1333,7 +1333,7 @@ ion-icon {
 
   /* Swiper Navigation Variables */
   --swiper-navigation-size: clamp(24px, 4vw, 40px);
-  --swiper-navigation-color: #3fa0ff;
+  --swiper-navigation-color: #ffffff;
   --swiper-navigation-top-offset: 50%;
   --swiper-navigation-sides-offset: 0px;
 }
@@ -1349,7 +1349,7 @@ ion-icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: all 0.5s;
 }
 
 /* === Photo Items === */
@@ -1359,11 +1359,10 @@ ion-icon {
   height: auto;
   aspect-ratio: 16 / 9;
   border-radius: 12px;
-  transition: all 0.3s ease;
+  transition: all 0.5s;
   z-index: 11;
 }
 
-/* === Swiper Navigation Styling === */
 .swiper-button-prev,
 .swiper-button-next {
   width: clamp(40px, 10vw, 70px);
@@ -1394,7 +1393,7 @@ ion-icon {
 .swiper-slide {
   opacity: 0.5;
   transform: scale(0.9);
-  transition: 0.5s ease;
+  transition: all 0.5s;
 }
 
 .swiper-slide-active {
