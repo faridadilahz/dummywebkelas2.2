@@ -777,6 +777,10 @@ ion-icon {
     font-size: 48px;
   }
 
+  .card-1 span {
+  font-size: 38px;
+  }
+  
   .card span {
     font-size: 38px;
   }
@@ -807,6 +811,7 @@ ion-icon {
     flex-shrink: 0;
   }
 }
+
 @media screen and (max-width: 900px) {
   .samping {
     gap: 5px;
@@ -832,6 +837,10 @@ ion-icon {
     width: 95%;
   }
 
+  .card-1 span {
+    font-size: 32px;
+  }
+  
   .card span {
     font-size: 32px;
   }
@@ -965,6 +974,10 @@ ion-icon {
     width: 95%;
   }
 
+  .card-1 span {
+    font-size: 28px;
+  }
+  
   .card span {
     font-size: 28px;
   }
