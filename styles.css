@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Jersey+10:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 html {
   scroll-behavior: auto;
@@ -1483,6 +1484,105 @@ ion-icon {
 
   .swiper-button-next {
     right: 0;
+  }
+}
+
+/*Chat Box*/
+#chat-box {
+  padding: 40px 0 80px;
+  background: #1e1e28;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  text-align: center;
+  margin: 0 auto;
+}
+
+#chat-box h1 {
+  font-size: 76px;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+#messages {
+  font-family: Poppins, sans-serif;
+  text-align: left;
+  width: 60%;
+  height: 400px;
+  overflow-y: auto;
+  background: #ffffff14;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  margin: 0 auto;
+}
+
+#chat-input {
+  font-family: Poppins, sans-serif;
+  width: 55%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+}
+
+button {
+  font-family: Poppins, sans-serif;
+  padding: 10px 10px;
+  color: #ffffff;
+  background: #169976;
+  border: none;
+  border-radius: 6px;
+  margin-left: 4px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background: #1dcd9f;
+}
+
+#messages div {
+  margin-top: 15px;
+  margin-bottom: 8px;
+  padding-left: 20px;
+  text-indent: 0;
+}
+
+@media screen and (max-width: 1068px) {
+  #chat-box h1 {
+    font-size: 68px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #chat-box {
+    height: auto;
+    padding: 40px 0 80px;
+    background: #1e1e28;
+    text-align: center;
+    backdrop-filter: blur(8px);
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  #chat-box h1 {
+    font-size: 52px;
+  }
+
+  #chat-input {
+    font-family: Poppins, sans-serif;
+    width: 50%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+  }
+
+  #messages div {
+    margin-top: 15px;
+    margin-bottom: 8px;
+    padding-left: 10px;
+    text-indent: 0;
   }
 }
 
