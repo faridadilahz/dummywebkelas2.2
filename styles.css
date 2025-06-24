@@ -1586,6 +1586,23 @@ button:hover {
   }
 }
 
+@media screen and (max-width: 500px) {
+  #chat-input {
+    font-family: Poppins, sans-serif;
+    width: 45%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+  }
+
+    #messages div {
+    margin-top: 15px;
+    margin-bottom: 8px;
+    padding-left: 0px;
+    text-indent: 0;
+  }
+}
+
 /*Footer*/
 .footer-section {
   background-color: #222831;
