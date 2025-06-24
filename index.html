@@ -701,7 +701,7 @@
     </section>
 
     <section id="picket" class="content">
-      <h1 data-aos="fade-in" data-aos-duration="1000">Picket Schedule</h1>
+      <h1 data-aos="fade-in" data-aos-duration="1000">Jadwal Piket</h1>
       <div data-aos="fade-in" data-aos-duration="1000" class="grid-container">
         <div class="card-picket">
           <h2>Senin</h2>
@@ -769,7 +769,7 @@
     </section>
 
     <section id="subject" class="content">
-      <h1 data-aos="fade-in" data-aos-duration="1000">Subject Schedule</h1>
+      <h1 data-aos="fade-in" data-aos-duration="1000">Jadwal Pelajaran</h1>
       <div
         data-aos="fade-in"
         data-aos-duration="1000"
@@ -848,7 +848,7 @@
     </section>
 
     <section id="gallery" class="content">
-      <h1 data-aos="fade-in">Our Photos</h1>
+      <h1 data-aos="fade-in">Galeri Kami</h1>
 
       <div
         data-aos="fade-in"
@@ -896,6 +896,85 @@
       </div>
     </section>
 
+    <section id="chat-box">
+      <h1>Pesan Anonim</h1>
+      <section id="messages"></section>
+      <input type="text" id="chat-input" placeholder="Ketik pesan" />
+      <button onclick="sendMessage()">Kirim</button>
+    </section>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyCskAF55ISXN0pPWROSDeAlMD2RAUO3LnA",
+        authDomain: "pepelegsone.firebaseapp.com",
+        databaseURL: "https://pepelegsone-default-rtdb.firebaseio.com/",
+        projectId: "pepelegsone",
+        storageBucket: "pepelegsone.firebasestorage.app",
+        messagingSenderId: "186093532078",
+        appId: "1:186093532078:web:2e6e13c7821248a22e8e3f",
+      };
+
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.database();
+      const chatRef = db.ref("messages");
+
+      const bannedWords = [
+        "anjing",
+        "goblok",
+        "kontol",
+        "memek",
+        "bangsat",
+        "ajg",
+        "gblk",
+        "kntl",
+        "mmek",
+        "bgst",
+      ];
+
+      function cleanBadWords(text) {
+        let clean = text;
+        bannedWords.forEach((word) => {
+          const regex = new RegExp("\\b" + word + "\\b", "gi");
+          clean = clean.replace(regex, "*".repeat(word.length));
+        });
+        return clean;
+      }
+
+      function sendMessage() {
+        const input = document.getElementById("chat-input");
+        let text = input.value.trim();
+        if (!text) return;
+
+        text = cleanBadWords(text);
+
+        chatRef.push({
+          text: text,
+          time: Date.now(),
+        });
+
+        input.value = "";
+      }
+
+      const messages = document.getElementById("messages");
+      chatRef.on("child_added", (snapshot) => {
+        const msg = document.createElement("div");
+        msg.innerHTML = `<ion-icon name="person-circle-outline" style="font-size:20px; margin-right:6px; vertical-align:middle; color: #ffffff;"></ion-icon> ${snapshot.val().text}`;
+        messages.appendChild(msg);
+        messages.scrollTop = messages.scrollHeight;
+      });
+      document
+        .getElementById("chat-input")
+        .addEventListener("keydown", function (e) {
+          if (e.key === "Enter") {
+            e.preventDefault();
+            sendMessage();
+          }
+        });
+    </script>
+
     <section id="footer" class="footer-section">
       <div data-aos="fade-in" class="footer-about">
         <h2 data-aos="fade-in">Thank You!</h2>
@@ -936,13 +1015,13 @@
 
     <audio id="bg-music" loop>
       <source
-        src="Djo - End Of Beginning (Official Audio).mp3"
+        src="Sahabat Sejati - Sheila On 7.mp3"
         type="audio/mpeg"
       />
       Your browser does not support the audio element.
     </audio>
 
-    <button id="music-button" title="Play Djo - End Of Beginning">
+    <button id="music-button" title="Play Sahabat Sejati - SO7">
       <ion-icon name="musical-notes-outline"></ion-icon>
     </button>
 
