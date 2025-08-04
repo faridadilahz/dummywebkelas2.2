@@ -80,14 +80,14 @@ window.addEventListener("scroll", () => {
   }
 });
 
-const swiper = new Swiper(".mySwiper", {
+const galleryswiper = new Swiper(".mySwiper", {
   loop: true,
   effect: "coverflow",
   centeredSlides: true,
   slidesPerView: "auto",
   coverflowEffect: {
     rotate: 0,
-    stretch: 150, // default
+    stretch: 150,
     depth: 100,
     modifier: 2.5,
     slideShadows: false,
@@ -133,6 +133,38 @@ const swiper = new Swiper(".mySwiper", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+var swiper = new Swiper(".newsSwiper", {
+  loop: true,
+  slidesPerView: 5,
+  spaceBetween: 20,
+  speed: 5000,
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+  },
+  freeMode: true,
+  freeModeMomentum: false,
+
+  // Tambahan untuk responsif
+  breakpoints: {
+    0: {
+      slidesPerView: 3,
+    },
+    576: {
+      slidesPerView: 3,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1068: {
+      slidesPerView: 5,
+    },
+  },
+});
+
+
+
 
 const music = document.getElementById("bg-music");
 const button = document.getElementById("music-button");
