@@ -1613,7 +1613,7 @@ ion-icon {
   max-height: 120px;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 3; /* maksimal 3 baris */
+  text-overflow: ellipsis;
   -webkit-box-orient: vertical;
 }
 
