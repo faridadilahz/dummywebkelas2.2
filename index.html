@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Website PPLG 1 27</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="img/logokelas.png" />
+    <link rel="stylesheet" href="styles/styles.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="stylesheet"
@@ -116,7 +117,6 @@
             <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
           </a>
         </li>
-
         <li class="list">
           <a
             href="/gallery"
@@ -770,6 +770,8 @@
 
     <section id="subject" class="content">
       <h1 data-aos="fade-in" data-aos-duration="1000">Jadwal Pelajaran</h1>
+      <hr />
+      <h5 data-aos="fade-in" data-aos-duration="1000">Minggu Ganjil</h5>
       <div
         data-aos="fade-in"
         data-aos-duration="1000"
@@ -778,46 +780,99 @@
         <div class="subject senin">
           <h2>Senin</h2>
           <ul>
-            <li>IPAS</li>
-            <li>BK</li>
-            <li>Sejarah</li>
-            <li>PPKN</li>
+            <li>Mapel Pilihan (Bu Wanda)</li>
+            <li>Mapel Pilihan (Bu Wanda)</li>
+            <li>Mapel Pilihan (Bu Wanda)</li>
+            <li>-</li>
           </ul>
         </div>
         <div class="subject selasa">
           <h2>Selasa</h2>
           <ul>
-            <li>Kejuruan Bu Wanda</li>
-            <li>Kejuruan Pa Sunggono</li>
-            <li>-</li>
-            <li>-</li>
+            <li>PBTGM (Pa Mujib)</li>
+            <li>PBTGM (Pa Mujib)</li>
+            <li>PBTGM (Pa Mujib)</li>
+            <li>PBTGM (Pa Mujib)</li>
           </ul>
         </div>
         <div class="subject rabu">
           <h2>Rabu</h2>
           <ul>
-            <li>Seni Budaya</li>
-            <li>PJOK</li>
-            <li>Informatika</li>
+            <li>Basis Data (Pa Yuyus)</li>
+            <li>Basis Data (Pa Yuyus)</li>
+            <li>Basis Data (Pa Yuyus)</li>
             <li>-</li>
           </ul>
         </div>
         <div class="subject kamis">
           <h2>Kamis</h2>
           <ul>
-            <li>Bahasa Indonesia</li>
-            <li>Bahasa Inggris</li>
-            <li>Matematika</li>
+            <li>PBB (Pa Gono)</li>
+            <li>PBB (Pa Gono)</li>
+            <li>PBB (Pa Gono)</li>
             <li>-</li>
           </ul>
         </div>
         <div class="subject jumat">
           <h2>Jumat</h2>
           <ul>
-            <li>PAIBP</li>
+            <li>Pemrograman Web (Pa Musa)</li>
+            <li>Pemrograman Web (Pa Musa)</li>
+            <li>Pemrograman Web (Pa Musa)</li>
+            <li>-</li>
+          </ul>
+        </div>
+      </div>
+      <hr />
+      <h5 data-aos="fade-in" data-aos-duration="1000">Minggu Genap</h5>
+      <div
+        data-aos="fade-in"
+        data-aos-duration="1000"
+        class="subject-container"
+      >
+        <div class="subject senin">
+          <h2>Senin</h2>
+          <ul>
+            <li>PKK</li>
+            <li>PKK</li>
+            <li>PKK</li>
+            <li>-</li>
+          </ul>
+        </div>
+        <div class="subject selasa">
+          <h2>Selasa</h2>
+          <ul>
+            <li>B. Sunda</li>
+            <li>B. Indonesia</li>
             <li>Matematika</li>
-            <li>Bahasa Sunda</li>
-            <li>IPAS</li>
+            <li>-</li>
+          </ul>
+        </div>
+        <div class="subject rabu">
+          <h2>Rabu</h2>
+          <ul>
+            <li>B. Indo</li>
+            <li>Matematika</li>
+            <li>PAIBP</li>
+            <li>-</li>
+          </ul>
+        </div>
+        <div class="subject kamis">
+          <h2>Kamis</h2>
+          <ul>
+            <li>B. Inggris</li>
+            <li>PAIBP</li>
+            <li>Sejarah</li>
+            <li>-</li>
+          </ul>
+        </div>
+        <div class="subject jumat">
+          <h2>Jumat</h2>
+          <ul>
+            <li>PJOK</li>
+            <li>PPKN</li>
+            <li>B. Inggris</li>
+            <li>-</li>
           </ul>
         </div>
       </div>
@@ -846,6 +901,134 @@
         </div>
       </div>
     </section>
+
+    <section id="chat-box">
+      <h1 data-aos="fade-in">Pesan Anonim</h1>
+      <section data-aos="fade-in" id="messages"></section>
+      <input type="text" id="chat-input" placeholder="Ketik pesan" />
+      <button onclick="sendMessage()">Kirim</button>
+    </section>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyCskAF55ISXN0pPWROSDeAlMD2RAUO3LnA",
+        authDomain: "pepelegsone.firebaseapp.com",
+        databaseURL: "https://pepelegsone-default-rtdb.firebaseio.com/",
+        projectId: "pepelegsone",
+        storageBucket: "pepelegsone.firebasestorage.app",
+        messagingSenderId: "186093532078",
+        appId: "1:186093532078:web:2e6e13c7821248a22e8e3f",
+      };
+
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.database();
+      const chatRef = db.ref("messages");
+
+      const bannedWords = [
+        "anjing",
+        "goblok",
+        "kontol",
+        "memek",
+        "bangsat",
+        "ajg",
+        "gblk",
+        "kntl",
+        "mmek",
+        "bgst",
+        "jancok",
+        "ngentod",
+        "asu",
+        "bajingan",
+        "babi",
+        "kampret",
+        "sialan",
+        "tai",
+        "taik",
+        "mmk",
+        "bbi",
+        "bangke",
+        "monyet",
+        "bekicot",
+        "setan",
+        "cenut",
+        "brengsek",
+        "bacot",
+        "bego",
+        "tolol",
+        "jembut",
+        "jembot",
+        "pepek",
+        "perek",
+        "ngewe",
+        "ngewe",
+        "bajingan",
+        "bajing",
+        "keparat",
+        "keparaat",
+        "kepale",
+        "kampreet",
+        "tololl",
+        "tololll",
+        "tololl",
+        "tols",
+        "jingan",
+        "ajgna",
+        "gblg",
+        "kntol",
+        "kntolll",
+        "mmekkk",
+      ];
+
+      function cleanBadWords(text) {
+        let clean = text;
+        bannedWords.forEach((word) => {
+          const regex = new RegExp("\\b" + word + "\\b", "gi");
+          clean = clean.replace(regex, "*".repeat(word.length));
+        });
+        return clean;
+      }
+
+      function sendMessage() {
+        const input = document.getElementById("chat-input");
+        let text = input.value.trim();
+        if (!text) return;
+
+        text = cleanBadWords(text);
+
+        if (text.length > 30) {
+          alert("Maksimal 30 karakter ya le");
+          return;
+        }
+
+        chatRef.push({
+          text: text,
+          time: Date.now(),
+        });
+
+        input.value = "";
+      }
+
+      const messages = document.getElementById("messages");
+      chatRef.on("child_added", (snapshot) => {
+        const msg = document.createElement("div");
+        msg.innerHTML = `<ion-icon name="person-circle-outline" style="font-size:30px; margin-right:6px; vertical-align:middle; color: #ffffff;"></ion-icon> ${
+          snapshot.val().text
+        }`;
+        messages.appendChild(msg);
+        messages.scrollTop = messages.scrollHeight;
+      });
+      document
+        .getElementById("chat-input")
+        .addEventListener("keydown", function (e) {
+          if (e.key === "Enter") {
+            e.preventDefault();
+            sendMessage();
+          }
+        });
+    </script>
 
     <section id="gallery" class="content">
       <h1 data-aos="fade-in">Galeri Kami</h1>
@@ -896,104 +1079,138 @@
       </div>
     </section>
 
-    <section id="chat-box">
-      <h1>Pesan Anonim</h1>
-      <section id="messages"></section>
-      <input type="text" id="chat-input" placeholder="Ketik pesan" />
-      <button onclick="sendMessage()">Kirim</button>
+    <section id="news" class="content">
+      <h1>ONE'S NEWS</h1>
+      <div class="swiper newsSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide news-swiper-slide">
+            <div class="news-card">
+              <img src="img/Mawar.jpeg" alt="news-img" />
+              <div class="card-body">
+                <h3>
+                  Mawar Khaeriza berhasil mendapatkan juara 1 pencak silat
+                  tingkat nasional.
+                </h3>
+                <span
+                  >Mawar berhasil membuktikan kemampuannya dalam pencak silat
+                  dan meraih juara 1 tingkat nasional.</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="news-card">
+              <img src="img/ardaa.jpg" alt="news-img" />
+              <div class="card-body">
+                <h3>
+                  Putri Arda Rianty berhasil mendapatkan juara 1 UI/ UX design
+                  tingkat nasional.
+                </h3>
+                <span
+                  >Arda berhasil membuktikan kemampuannya dalam UI/ UX dan
+                  meraih juara 1 tingkat nasional.</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="news-card">
+              <img src="img/Farid.jpeg" alt="news-img" />
+              <div class="card-body">
+                <h3>
+                  Muhammad Farid Adilah H berhasil mendapatkan juara 1 lomba
+                  website tingkat nasional.
+                </h3>
+                <span
+                  >Farid berhasil membuktikan kemampuannya dalam membuat website
+                  dan meraih juara 1 tingkat nasional.</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="news-card">
+              <img src="img/naila.jpg" alt="news-img" />
+              <div class="card-body">
+                <h3>
+                  Naila Syahrani berhasil mendapatkan juara 1 judo tingkat
+                  nasional.
+                </h3>
+                <span
+                  >Naila berhasil membuktikan kemampuannya dalam judo dan meraih
+                  juara 1 tingkat nasional.</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="news-card">
+              <img src="img/Davi.jpeg" alt="news-img" />
+              <div class="card-body">
+                <h3>
+                  Muhamad Davi berhasil mendapatkan juara 1 lomba website
+                  tingkat nasional.
+                </h3>
+                <span
+                  >Davi berhasil membuktikan kemampuannya dalam membuat website
+                  dan meraih juara 1 tingkat nasional.</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="news-card">
+              <img src="img/akhdan.jpg" alt="news-img" />
+              <div class="card-body">
+                <h3>
+                  Muhammad Akhdan Syauqi berhasil mendapatkan juara 1 devops
+                  tingkat nasional.
+                </h3>
+                <span
+                  >Akhdan berhasil membuktikan kemampuannya dalam devops dan
+                  meraih juara 1 tingkat nasional.</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="news-card">
+              <img src="img/Mifzal.jpg" alt="news-img" />
+              <div class="card-body">
+                <h3>
+                  Muhammad Mifzal Rusyaidi berhasil mendapatkan juara 1 cyber
+                  security tingkat nasional.
+                </h3>
+                <span
+                  >Mifzal berhasil membuktikan kemampuannya dalam cyber security
+                  dan meraih juara 1 tingkat nasional.</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
-
-    <script>
-      const firebaseConfig = {
-        apiKey: "AIzaSyCskAF55ISXN0pPWROSDeAlMD2RAUO3LnA",
-        authDomain: "pepelegsone.firebaseapp.com",
-        databaseURL: "https://pepelegsone-default-rtdb.firebaseio.com/",
-        projectId: "pepelegsone",
-        storageBucket: "pepelegsone.firebasestorage.app",
-        messagingSenderId: "186093532078",
-        appId: "1:186093532078:web:2e6e13c7821248a22e8e3f",
-      };
-
-      firebase.initializeApp(firebaseConfig);
-      const db = firebase.database();
-      const chatRef = db.ref("messages");
-
-      const bannedWords = [
-        "anjing",
-        "goblok",
-        "kontol",
-        "memek",
-        "bangsat",
-        "ajg",
-        "gblk",
-        "kntl",
-        "mmek",
-        "bgst",
-      ];
-
-      function cleanBadWords(text) {
-        let clean = text;
-        bannedWords.forEach((word) => {
-          const regex = new RegExp("\\b" + word + "\\b", "gi");
-          clean = clean.replace(regex, "*".repeat(word.length));
-        });
-        return clean;
-      }
-
-      function sendMessage() {
-        const input = document.getElementById("chat-input");
-        let text = input.value.trim();
-        if (!text) return;
-
-        text = cleanBadWords(text);
-
-        chatRef.push({
-          text: text,
-          time: Date.now(),
-        });
-
-        input.value = "";
-      }
-
-      const messages = document.getElementById("messages");
-      chatRef.on("child_added", (snapshot) => {
-        const msg = document.createElement("div");
-        msg.innerHTML = `<ion-icon name="person-circle-outline" style="font-size:20px; margin-right:6px; vertical-align:middle; color: #ffffff;"></ion-icon> ${snapshot.val().text}`;
-        messages.appendChild(msg);
-        messages.scrollTop = messages.scrollHeight;
-      });
-      document
-        .getElementById("chat-input")
-        .addEventListener("keydown", function (e) {
-          if (e.key === "Enter") {
-            e.preventDefault();
-            sendMessage();
-          }
-        });
-    </script>
 
     <section id="footer" class="footer-section">
       <div data-aos="fade-in" class="footer-about">
-        <h2 data-aos="fade-in">Thank You!</h2>
+        <h2 data-aos="fade-in">Terima Kasih!</h2>
         <p data-aos="fade-in">
-          A Class Website made by
+          Website Kelas ini dibuat oleh
           <a
             href="https://faridadilahz.github.io/personalportfolio/"
             target="_blank"
           >
             Muhammad Farid Adilah Handi
           </a>
-          and
+          dan
           <a href="https://davi3711.github.io/Personal_Davi/" target="_blank">
             Muhamad Davi Najamudin Ansori
           </a>
         </p>
       </div>
       <div class="footer-social">
-        <h2>Follow Us</h2>
+        <h2>Follow Kami</h2>
         <a
           href="https://whatsapp.com/channel/0029VajXXEG65yDA7NlTqG1w"
           target="_blank"
@@ -1014,10 +1231,7 @@
     </section>
 
     <audio id="bg-music" loop>
-      <source
-        src="Sahabat Sejati - Sheila On 7.mp3"
-        type="audio/mpeg"
-      />
+      <source src="Sahabat Sejati - Sheila On 7.mp3" type="audio/mpeg" />
       Your browser does not support the audio element.
     </audio>
 
@@ -1076,6 +1290,6 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script src="script/script.js"></script>
   </body>
 </html>
